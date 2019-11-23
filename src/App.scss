@@ -1,0 +1,23 @@
+* {
+  border: 0; padding: 0; margin: 0;
+  box-sizing: border-box;
+}
+
+section {  
+  width: 100%;
+  height: 100vh;
+}
+
+
+@for $i from 1 through 4 {
+  .section-wrapper-#{$i} {
+    height: $i * 100vh;
+    position: relative;
+  }
+}
+
+
+.section-sticky-top {
+  position: sticky;
+  top: 0;
+}

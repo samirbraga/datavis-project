@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState, } from 'react';
+import { ScrollyWrapper, useScrolly, withScrolly } from './react-scrolly';
+import IntroSection from './components/intro-section';
+import TextSection from './components/text-section';
+import Svg from './components/svg';
+import './App.scss';
 
-function App() {
+
+const App = () => {
+  const scrolly = useScrolly(scroll => scroll);
+  
+  scrolly.setWrapperHeight(document.documentElement.clientHeight);
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ScrollyWrapper
+      scrolly={scrolly}
+      style={{
+        background: `white`
+      }}
+      useBodyAsWrapper={true}
+      component='main'
+    >
+      <IntroSection scrolly={scrolly} />
+      <TextSection scrolly={scrolly} />
+      <Svg scrolly={scrolly} />
+    </ScrollyWrapper>
   );
-}
+};
 
 export default App;

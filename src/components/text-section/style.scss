@@ -1,0 +1,29 @@
+.text-section-wrapper {
+    top: -120vh;
+}
+
+.text-section {
+    opacity: 1;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    h2 {
+        transition: transform 0s ease-out;
+        display: block;
+        max-width: 800px;
+        margin: auto;
+
+        .text-letter {
+            opacity: 0;
+            transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    
+            &.visible {
+                opacity: 1;
+            }
+        }
+    }
+}
