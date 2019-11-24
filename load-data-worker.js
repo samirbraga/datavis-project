@@ -1,18 +1,33 @@
 if (typeof importScripts === 'function') {
     importScripts('https://d3js.org/d3.v5.min.js');
 
+    const datasets = {};
+
     self.addEventListener("message", e => {
         const csvURL = e.data.csvName;
-        let csvReq = new XMLHttpRequest();
-        csvReq.open("GET", csvURL, true);
-        csvReq.onreadystatechange = function () {
-            if (csvReq.readyState === 4 && csvReq.status === 200) {
-                return postMessage({
-                    data: d3.csvParse(csvReq.responseText),
-                    year: e.data.year
+        const year = e.data.year.toString();
+
+        if (!datasets[year]) {
+            let parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S");
+            let parseMonth = d3.timeParse('%m');
+    
+            d3.csv(csvURL).then(ds => {
+                ds.forEach(function (d) {
+                    d.datahora = parseDate(d.datahora);
                 });
-            }
-        };
-        csvReq.send();
+                
+                datasets[year] = ds;
+
+                return postMessage({
+                    data: ds,
+                    year: parseInt(year)
+                });
+            });
+        } else {
+            return postMessage({
+                data: datasets[year],
+                year: parseInt(year)
+            });
+        }
     });
 }

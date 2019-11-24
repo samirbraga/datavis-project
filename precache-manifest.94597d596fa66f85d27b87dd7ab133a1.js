@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2ea83740478c98c2c8df9c72e039486",
+    "revision": "de6ecfd7a108a9d45c90ace544f7ab90",
     "url": "/datavis-project/index.html"
   },
   {
-    "revision": "22b38bab9c770d6717ea",
+    "revision": "f6e05beb31daf97d136c",
     "url": "/datavis-project/static/css/2.d1b612ed.chunk.css"
   },
   {
-    "revision": "0b221d359b733b6eb0c1",
-    "url": "/datavis-project/static/css/main.285834fb.chunk.css"
+    "revision": "423c9d604daf1a41ad03",
+    "url": "/datavis-project/static/css/main.46a905fb.chunk.css"
   },
   {
-    "revision": "22b38bab9c770d6717ea",
-    "url": "/datavis-project/static/js/2.9b1d380f.chunk.js"
+    "revision": "f6e05beb31daf97d136c",
+    "url": "/datavis-project/static/js/2.69500042.chunk.js"
   },
   {
-    "revision": "0b221d359b733b6eb0c1",
-    "url": "/datavis-project/static/js/main.41452eb0.chunk.js"
+    "revision": "423c9d604daf1a41ad03",
+    "url": "/datavis-project/static/js/main.8ff09d16.chunk.js"
   },
   {
     "revision": "71702b42b282b7c76c23",
