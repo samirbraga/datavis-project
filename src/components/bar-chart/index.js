@@ -4,8 +4,6 @@ import * as d3 from 'd3';
 import crossfilter from 'crossfilter2';
 import "./style.scss";
 
-const datasets = {};
-
 const BarChart = props => {
     let node;
     const { worker, year } = props;

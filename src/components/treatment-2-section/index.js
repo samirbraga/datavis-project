@@ -86,7 +86,7 @@ const Treatment2Section = props => {
                                 Consideramos que se há vários focos próximos, e que se eles estão dentro da mesma hora, eles podem ser agregados em uma <strong>queimada</strong>, adicionando a informação de <strong>Número de Focos</strong> como peso para não perdermos a informação agregada e além disso removendo falsos-positivos.
                             </p>
                             <p>
-                                Abaixo seguem dois heatmaps como uma comparação do antes e depois deste filtro aplicado ao dataset do ano de 2003. 
+                                Abaixo seguem dois mapas de calor como uma comparação do antes e depois deste filtro aplicado ao dataset do ano de 2003.
                             </p>
                         </Animated>
                     </Col>

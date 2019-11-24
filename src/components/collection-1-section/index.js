@@ -39,7 +39,7 @@ const Collection1Section = props => {
                     <Col md={5}>
                         <Animated animationIn="fadeIn" isVisible={reached}>
                             <p className="pl-4">
-                                Os dados foram coletados do site <a href="http://queimadas.dgi.inpe.br/queimadas/bdqueimadas/">inpe.br</a>, o qual disponibiliza focos de queimadas coletados por satélite em vários países do mundo. Como o portal nos deixa exportar os dados de no máximo 360 dias, foram exportados os dados de 1999 a 2019, <strong>ano a ano</strong>. 
+                                Os dados foram obtidos através do site do <a href="http://queimadas.dgi.inpe.br/queimadas/bdqueimadas/">Instituto Nacional de Pesquisas Espaciais (INPE)</a>, o qual disponibiliza os focos de queimadas detectados por satélite em vários países da América Latina. O portal permite coletar os dados de no máximo 366 dias por vez, por esse motivo, os dados foram extraídos ano a ano <strong>de 1999 a 2019</strong>.
                             </p>
                         </Animated>
                     </Col>

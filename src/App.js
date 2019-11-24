@@ -14,6 +14,8 @@ import Treatment4Section from './components/treatment-4-section';
 import Treatment5Section from './components/treatment-5-section';
 import Vis1Section from './components/vis-1-section';
 import Vis2Section from './components/vis-2-section';
+import Vis3Section from './components/vis-3-section';
+import MapSection from './components/map-section';
 import SizePG from './components/size-pg';
 import './App.scss';
 
@@ -73,22 +75,11 @@ const TreatmentSections = withScrolly(props => {
 
 const App = () => {
   const scrolly = useScrolly(scroll => scroll);
-  const [CSVList, setCSVList] = useState({});
-  const [loaded, setLoaded] = useState(false);
   
   scrolly.setWrapperHeight(document.documentElement.clientHeight);
 
   useEffect(() => {
     document.documentElement.scrollTop = document.documentElement.scrollTop + 1;
-
-    // for (let i = 0; i < 21; i++) {
-    //   setTimeout(() => {
-    //     worker.postMessage({
-    //       csvName: `${process.env.PUBLIC_URL}/datasets/${1999 + i}_depois.csv`,
-    //       year: 1999 + i
-    //     });
-    //   }, 800 * i);
-    // }
   }, []);
 
   return (
@@ -113,6 +104,12 @@ const App = () => {
       <TitleSection progress={99} title='ANÁLISES E VISUALIZAÇÕES' scrolly={scrolly} />
       <Vis1Section scrolly={scrolly} worker={worker} />
       <Vis2Section scrolly={scrolly} worker={worker} />
+      <Vis3Section scrolly={scrolly} worker={worker} />
+      <TextSection
+        scrolly={scrolly}
+        text='Para um diagnóstico de quais variáveis climáticas são determinantes e quais regiões são mais vulneráveis às queimadas, é fundamental a análise do ciclo sazonal de temperatura, precipitação e umidade relativa. Outro fato importante, é que as queimadas por serem de origem antrópica estão diretamente ligadas às atividades agro-florestais. Pode-se demonstrar que as principais áreas de risco de queimadas concentram-se na região centro-oeste e norte do Brasil.'
+      />
+      <MapSection year={1999} worker={worker} />
     </ScrollyWrapper>
   );
 };

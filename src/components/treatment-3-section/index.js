@@ -54,7 +54,7 @@ const Treatment3Section = props => {
                 <Row className="align-items-center">
                     <Col md={{ offset: 1, size: 10}}>
                         <Animated animationIn="fadeIn" isVisible={reached}>
-                            <h3 className="text-center mb-3">Remoção de queimadas com menos de 3 focos</h3>
+                            <h3 className="text-center mb-3">Remoção de queimadas com menos de 10 focos</h3>
                             <p className="text-center mb-5">
                                 Os falso-positivos tratam de queimadas com poucos focos que podem se tratar apenas de incêndios em áreas urbanas. Uma queimada característica é mostrada na figura ao lado. <a href="http://queimadas.cptec.inpe.br/~rqueimadas/ExemplosValidacao/2019_exemplosvalida_INPE_Queimadas/?C=N;O=D">Aqui</a> há vários outros exemplos.
                             </p>

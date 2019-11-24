@@ -6,15 +6,17 @@ if (typeof importScripts === 'function') {
     self.addEventListener("message", e => {
         const csvURL = e.data.csvName;
         const year = e.data.year.toString();
+        const parseDate = e.data.parseDate;
 
         if (!datasets[year]) {
             let parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S");
-            let parseMonth = d3.timeParse('%m');
     
             d3.csv(csvURL).then(ds => {
-                ds.forEach(function (d) {
-                    d.datahora = parseDate(d.datahora);
-                });
+                if (parseDate) {
+                    ds.forEach(function (d) {
+                        d.datahora = parseDate(d.datahora);
+                    });
+                }
                 
                 datasets[year] = ds;
 

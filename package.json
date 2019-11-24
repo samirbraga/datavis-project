@@ -10,11 +10,13 @@
     "d3": "^5.14.2",
     "dc": "^3.1.8",
     "gh-pages": "^2.1.1",
+    "leaflet": "^1.6.0",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-animated-css": "^1.2.1",
     "react-d3-library": "^1.1.8",
     "react-dom": "^16.11.0",
+    "react-leaflet": "^2.6.0",
     "react-scripts": "3.2.0",
     "reactstrap": "^8.1.1"
   },
