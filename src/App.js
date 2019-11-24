@@ -84,7 +84,7 @@ const App = () => {
       <TextSection
         scrolly={scrolly}
         up={true}
-        text='O Brasil é conhecido internacionalmente pela Floresta Amazônica, a maior floresta tropical do mundo, porém esta é apenas uma parte do seu ecossistema que se estende em todo território nacional.'
+        text='A análise de dados consiste em compreender o significado dos dados coletados. Para sua visualização são necessárias algumas etapas: Coleta de dados, Tratamento, Análise, Contextualização, e a Visualização. Mostraremos este processo aplicado ao tema de Queimadas no Brasil.'
       />
       <TitleSection progress={15} title='COLETA DOS DADOS' scrolly={scrolly} />
       <Collection1Section scrolly={scrolly} />
