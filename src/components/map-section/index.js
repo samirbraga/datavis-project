@@ -135,7 +135,7 @@ const MapSection = props => {
             className="map-section section-sticky-top p-0"
         >
             
-            <div className="p-2 position-absolute">
+            <div className="p-2 position-absolute map-select">
                 <select className="p-2 d-block fire-bg mx-auto" onChange={e => fecthDataset(e.target.value)} name="" id="">
                     {Array(21).fill(1).map((_, i) => (
                         <option key={1999 + i} value={1999 + i}>
