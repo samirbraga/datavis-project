@@ -1,48 +1,47 @@
 import React, { useEffect, useState } from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import Svg from './svg';
 import { withScrolly } from '../../react-scrolly';
 import "./style.scss";
 
 const IntroSection = props => {
     const [rate, setRate] = useState(1);
-    const [hidden, setHidden] = useState(false);
 
     useEffect(() => {
         props.onInsideMe(relativeScroll => {
             setRate(1 - relativeScroll * 4);
         });
-
-        props.onLeaveMe(() => {
-            setRate(0);
-            setTimeout(() => setHidden(true), 200);
-        });
-        props.onEnterMe(() => {
-            setHidden(false);
-        });
     }, []);
 
     return (
         <div className="section-wrapper-2" ref={props.innerRef}>
-            <section
+            <Container fluid
+                tag='section'
                 className="intro-section section-sticky-top"
-                hidden={hidden}
                 style={{
                     opacity: rate
                 }}
             >  
-                <div
-                    style={{
-                        transform: `scale(${1 + (1 - rate)})`,
-                    }}
-                    className="intro-bg"
-                />
-                <h1
-                    style={{
-                        opacity: rate
-                    }}
-                    >
-                    POLÍTICAS AMBIENTAIS
-                </h1>
-            </section>
+                <Row className="text-left h-100 align-items-center">
+                    <Col md={{ size: 5, offset: 1 }}>
+                        <h1
+                            style={{
+                                opacity: rate
+                            }}
+                            className="text-left"
+                            >
+                            VISUALIZAÇÃO DE <br/>DADOS PARA A WEB
+                        </h1>
+                        <hr className="my-3" />
+                        <p>
+                            Uma aplicação prática ao tema <strong>Queimadas no Brasil</strong>
+                        </p>
+                    </Col>
+                    <Col md={{ size: 5 }}>
+                        <Svg />
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 };

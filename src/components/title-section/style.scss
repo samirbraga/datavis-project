@@ -1,0 +1,54 @@
+.title-section {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    
+    .title-progress-bar {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        color: rgba(255, 255, 255, 0.3);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), currentColor); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-right: 1px solid rgba(255, 255, 255, 0.6);
+        transition: color 0.2s ease-out;
+        animation: progress-animation 1s ease-out 0s infinite alternate;
+
+        span {
+            display: block;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+
+            &.title-progress-bar-value {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    *:not(.title-progress-bar) {
+        z-index: 1;
+    }
+
+    h2 {
+        color: white;
+        font-weight: normal;
+        font-size: 3rem;
+        font-family: Alata, sans-serif;
+    }
+}
+
+@keyframes progress-animation {
+    0% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 20% center;
+    }
+    100% {
+        background-position: 0% center;
+    }
+}

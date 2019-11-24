@@ -1,0 +1,13 @@
+.treatment-section {
+    .treatment-img {
+        > div {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        > img {
+            width: 100%
+        }
+    }
+}

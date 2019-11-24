@@ -6,13 +6,58 @@
 section {  
   width: 100%;
   height: 100vh;
+  max-height: 100%;
+  position: relative;
+  z-index: 1;
+
+  h3 {
+    color: #333;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #666;
+    font-family: Roboto, sans-serif;
+  }
 }
 
+.section-wrapper-half {
+  height: 50vh;
+  position: relative;
+}
+
+.section-wrapper-up-half {
+  top: 60vh;
+  margin-bottom: 60vh;
+}
 
 @for $i from 1 through 4 {
   .section-wrapper-#{$i} {
     height: $i * 100vh;
     position: relative;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .row {
+      height: 100%;
+    }
+  }
+
+  .section-wrapper-#{$i}-half {
+    height: $i * 100vh + 50vh;
+    position: relative;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .row {
+      height: 100%;
+    }
+  }
+
+  .section-wrapper-up-#{$i} {
+    top: -$i * 100vh + -$i * 20vh;
+    margin-bottom: -$i * 100vh + -$i * 20vh;
   }
 }
 
@@ -20,4 +65,25 @@ section {
 .section-sticky-top {
   position: sticky;
   top: 0;
+}
+
+.fire-bg {
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.app-wrapper {
+  position: relative;
+
+  .app-bg {
+    left: 0.5rem;
+    top: 0.5rem;
+    height: calc(100% - 1rem);
+    width: calc(100% - 1rem); 
+    position: absolute;
+    background: #ffffff;
+  }
 }

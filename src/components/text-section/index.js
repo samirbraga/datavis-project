@@ -24,8 +24,7 @@ const AnimatedText = props => {
 
 const TextSection = props => {
     const [rate, setRate] = useState(0);
-    const [isFixed, setFixed] = useState(false);
-    const text = 'O Brasil é conhecido internacionalmente pela Floresta Amazônica, a maior floresta tropical do mundo, porém esta é apenas uma parte do seu ecossistema que se estende em todo território nacional.';
+    const { text, up } = props;
 
     useEffect(() => {
         props.onSeeingMe(relativeScroll => {
@@ -38,22 +37,22 @@ const TextSection = props => {
 
     return (
         <div
-            className="section-wrapper-2 text-section-wrapper"
+            className={`section-wrapper-2 ${ up ? 'section-wrapper-up-1' : '' } text-section-wrapper`}
             ref={props.innerRef}
         >
             <section
                 className="text-section section-sticky-top"
             >
-                <h2
+                <p
                     style={{
-                        position: isFixed ? 'fixed' : 'relative'
+                        position: 'relative'
                     }}
                 >
                     <AnimatedText
                         seen={rate}
                         text={text}
                     />
-                </h2>
+                </p>
             </section>
         </div>
     );

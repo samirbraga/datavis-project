@@ -1,0 +1,266 @@
+{
+    "columns_i": [
+        {
+            "name": "datahora", 
+            "description": "Informação de ano, mês, dia, hora, minuto e segundo do foco da queimada.",
+            "willBeRemoved": false
+        },
+        {
+            "name": "satelite", 
+            "description": "Nome do satélite responsável pela captura da imagem a qual o foco pertence.",
+            "willBeRemoved": true
+        },
+        {
+            "name": "pais", 
+            "description": "Como exportamos os dados apenas do Brasil, todos os dados tem esse valor.",
+            "willBeRemoved": true
+        },
+        {
+            "name": "estado", 
+            "description": "Nome (e não sigla) do estado em que o foco está localizado.",
+            "willBeRemoved": false
+        },
+        {
+            "name": "municipio", 
+            "description": "Nome da cidade em que o foco está localizado.",
+            "willBeRemoved": false
+        },
+        {
+            "name": "bioma", 
+            "description": "Nome do bioma ao qual percente a localidade em que o foco foi registrado.",
+            "willBeRemoved": false
+        },
+        {
+            "name": "diasemchuva", 
+            "description": "Número de dias desde a última chuva na localidade em que o foco foi registrado.",
+            "willBeRemoved": true
+        },
+        {
+            "name": "precipitacao", 
+            "description": "Precipitação de chuva em milímetros no dia em que o foco foi registrado.",
+            "willBeRemoved": true
+        },
+        {
+            "name": "riscofogo", 
+            "description": "Risco de fogo cálulado pelo Inpe na localidade, podendo ser: Indeterminado, Mínimo, Baixo, Médio, Alto e Crítico.",
+            "willBeRemoved": true
+        },
+        {
+            "name": "latitude", 
+            "description": "Latitude geográfica do foco.",
+            "willBeRemoved": false
+        },
+        {
+            "name": "longitude", 
+            "description": "Longitude geográfica do foco.",
+            "willBeRemoved": false
+        },
+        {
+            "name": "frp", 
+            "description": "Sigla em inglês para Potência Radiativa do Fogo que está diretamente relacionada com a quantidade de biomassa queimada.",
+            "willBeRemoved": true
+        }
+    ],
+    "columns_m": [
+        {
+            "name": "datahora",
+            "description": "Informação de ano, mês, dia, hora, minuto e segundo do foco da queimada."
+        },
+        {
+            "name": "estado",
+            "description": "Nome (e não sigla) do estado em que o foco está localizado."
+        },
+        {
+            "name": "municipio",
+            "description": "Nome da cidade em que o foco está localizado."
+        },
+        {
+            "name": "bioma",
+            "description": "Nome do bioma ao qual percente a localidade em que o foco foi registrado."
+        },
+        {
+            "name": "latitude",
+            "description": "Latitude geográfica do foco."
+        },
+        {
+            "name": "longitude",
+            "description": "Longitude geográfica do foco."
+        }
+    ],
+    "columns_f": [
+        {
+            "name": "datahora",
+            "description": "Informação de ano, mês, dia, hora, minuto e segundo do foco da queimada."
+        },
+        {
+            "name": "estado",
+            "description": "Nome (e não sigla) do estado em que o foco está localizado."
+        },
+        {
+            "name": "municipio",
+            "description": "Nome da cidade em que o foco está localizado."
+        },
+        {
+            "name": "bioma",
+            "description": "Nome do bioma ao qual percente a localidade em que o foco foi registrado."
+        },
+        {
+            "name": "latitude",
+            "description": "Latitude geográfica do foco."
+        },
+        {
+            "name": "longitude",
+            "description": "Longitude geográfica do foco."
+        },
+        {
+            "name": "ano",
+            "description": "Ano retirado da coluna 'datahora'."
+        },
+        {
+            "name": "mes",
+            "description": "Mês retirado da coluna 'datahora'."
+        },
+        {
+            "name": "dia",
+            "description": "Dia retirado da coluna 'datahora'."
+        },
+        {
+            "name": "hora",
+            "description": "Hora retirado da coluna 'datahora'."
+        },
+        {
+            "name": "count",
+            "description": "Número de focos da queimada."
+        }
+    ],
+    "1999": {
+        "size_i_kb": 14.134495999999999,
+        "size_i_tupla": 147233,
+        "size_f_kb": 0.811008,
+        "size_f_tupla": 10136
+    },
+    "2000": {
+        "size_i_kb": 11.851712,
+        "size_i_tupla": 123454,
+        "size_f_kb": 0.732768,
+        "size_f_tupla": 9158
+    },
+    "2001": {
+        "size_i_kb": 28.794847999999998,
+        "size_i_tupla": 299945,
+        "size_f_kb": 1.754128,
+        "size_f_tupla": 21925
+    },
+    "2002": {
+        "size_i_kb": 77.3624,
+        "size_i_tupla": 805857,
+        "size_f_kb": 4.242048,
+        "size_f_tupla": 53024
+    },
+    "2003": {
+        "size_i_kb": 92.80035199999999,
+        "size_i_tupla": 966669,
+        "size_f_kb": 5.235488,
+        "size_f_tupla": 65442
+    },
+    "2004": {
+        "size_i_kb": 110.36777599999999,
+        "size_i_tupla": 1149663,
+        "size_f_kb": 5.891888,
+        "size_f_tupla": 73647
+    },
+    "2005": {
+        "size_i_kb": 103.203104,
+        "size_i_tupla": 1075031,
+        "size_f_kb": 5.357488,
+        "size_f_tupla": 66967
+    },
+    "2006": {
+        "size_i_kb": 65.11471999999999,
+        "size_i_tupla": 678277,
+        "size_f_kb": 3.4118079999999997,
+        "size_f_tupla": 42646
+    },
+    "2007": {
+        "size_i_kb": 110.76579199999999,
+        "size_i_tupla": 1153809,
+        "size_f_kb": 5.968128,
+        "size_f_tupla": 74600
+    },
+    "2008": {
+        "size_i_kb": 61.671008,
+        "size_i_tupla": 642405,
+        "size_f_kb": 3.4690079999999996,
+        "size_f_tupla": 43361
+    },
+    "2009": {
+        "size_i_kb": 41.004224,
+        "size_i_tupla": 427126,
+        "size_f_kb": 2.241648,
+        "size_f_tupla": 28019
+    },
+    "2010": {
+        "size_i_kb": 105.96972799999999,
+        "size_i_tupla": 1103850,
+        "size_f_kb": 5.597168,
+        "size_f_tupla": 69963
+    },
+    "2011": {
+        "size_i_kb": 49.54976,
+        "size_i_tupla": 516142,
+        "size_f_kb": 2.751408,
+        "size_f_tupla": 34391
+    },
+    "2012": {
+        "size_i_kb": 246.040832,
+        "size_i_tupla": 2562924,
+        "size_f_kb": 11.152128,
+        "size_f_tupla": 139400
+    },
+    "2013": {
+        "size_i_kb": 124.955936,
+        "size_i_tupla": 1301623,
+        "size_f_kb": 6.741408,
+        "size_f_tupla": 84266
+    },
+    "2014": {
+        "size_i_kb": 178.146848,
+        "size_i_tupla": 1855695,
+        "size_f_kb": 8.862767999999999,
+        "size_f_tupla": 110783
+    },
+    "2015": {
+        "size_i_kb": 253.35958399999998,
+        "size_i_tupla": 2639161,
+        "size_f_kb": 11.710928,
+        "size_f_tupla": 146385
+    },
+    "2016": {
+        "size_i_kb": 190.603328,
+        "size_i_tupla": 1985450,
+        "size_f_kb": 9.130208,
+        "size_f_tupla": 114126
+    },
+    "2017": {
+        "size_i_kb": 274.9592,
+        "size_i_tupla": 2864157,
+        "size_f_kb": 12.463168,
+        "size_f_tupla": 155788
+    },
+    "2018": {
+        "size_i_kb": 173.433728,
+        "size_i_tupla": 1806600,
+        "size_f_kb": 9.180368,
+        "size_f_tupla": 114753
+    },
+    "2019": {
+        "size_i_kb": 364.641536,
+        "size_i_tupla": 3798348,
+        "size_f_kb": 15.115328,
+        "size_f_tupla": 188940
+    },
+    "total_i_tupla": 27903419,
+    "total_i_kb": 2678.730912,
+    "total_f_tupla": 1647720,
+    "total_f_kb": 131.82028799999998
+}

@@ -14,6 +14,7 @@ const withScrolly = Component => props => {
         onInsideMe: undefined,
         onEnterMe: undefined,
         onLeaveMe: undefined,
+        onSeeMe: undefined,
         onBeforeMe: undefined,
         onAfterMe: undefined,
         onSeeingMe: undefined
@@ -49,6 +50,12 @@ const withScrolly = Component => props => {
 
         listeners.onEnterMe &&
             scrolly.pure.onEnter(boundary, listeners.onEnterMe);
+
+        listeners.onSeeMe &&
+            scrolly.pure.onEnter([
+                topBoundary - scrolly.getWrapperHeight() / 2,
+                bottomBoundary - scrolly.getWrapperHeight() / 2
+            ], listeners.onSeeMe);
 
         listeners.onLeaveMe &&
             scrolly.pure.onLeave(boundary, listeners.onLeaveMe);

@@ -1,0 +1,11 @@
+.collection-section {
+    .collection-img {
+        > div {
+            background-position: center;
+        }
+    }
+
+    table > thead tr th {
+        cursor: pointer;
+    }
+}
