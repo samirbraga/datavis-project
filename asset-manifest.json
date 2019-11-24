@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.2292dca6.chunk.css",
-    "main.js": "/static/js/main.e04be6c9.chunk.js",
-    "main.js.map": "/static/js/main.e04be6c9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.46640c3d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.46640c3d.js.map",
-    "static/css/2.d1b612ed.chunk.css": "/static/css/2.d1b612ed.chunk.css",
-    "static/js/2.4fb0502d.chunk.js": "/static/js/2.4fb0502d.chunk.js",
-    "static/js/2.4fb0502d.chunk.js.map": "/static/js/2.4fb0502d.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e750c530027fea883b95116bc294b073.js": "/precache-manifest.e750c530027fea883b95116bc294b073.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d1b612ed.chunk.css.map": "/static/css/2.d1b612ed.chunk.css.map",
-    "static/css/main.2292dca6.chunk.css.map": "/static/css/main.2292dca6.chunk.css.map",
-    "static/media/antes-2003.jpg": "/static/media/antes-2003.daa121b7.jpg",
-    "static/media/depois-2003.jpg": "/static/media/depois-2003.1f5015a8.jpg",
-    "static/media/exemplo-incendio.jpg": "/static/media/exemplo-incendio.c8d2f961.jpg",
-    "static/media/inpe-form.jpg": "/static/media/inpe-form.47c527aa.jpg"
+    "main.css": "/datavis-project/static/css/main.561f9a79.chunk.css",
+    "main.js": "/datavis-project/static/js/main.20f751e7.chunk.js",
+    "main.js.map": "/datavis-project/static/js/main.20f751e7.chunk.js.map",
+    "runtime-main.js": "/datavis-project/static/js/runtime-main.6105d856.js",
+    "runtime-main.js.map": "/datavis-project/static/js/runtime-main.6105d856.js.map",
+    "static/css/2.d1b612ed.chunk.css": "/datavis-project/static/css/2.d1b612ed.chunk.css",
+    "static/js/2.4fb0502d.chunk.js": "/datavis-project/static/js/2.4fb0502d.chunk.js",
+    "static/js/2.4fb0502d.chunk.js.map": "/datavis-project/static/js/2.4fb0502d.chunk.js.map",
+    "index.html": "/datavis-project/index.html",
+    "precache-manifest.54c8cc30ea67aa1e88b5b881ae68f2ae.js": "/datavis-project/precache-manifest.54c8cc30ea67aa1e88b5b881ae68f2ae.js",
+    "service-worker.js": "/datavis-project/service-worker.js",
+    "static/css/2.d1b612ed.chunk.css.map": "/datavis-project/static/css/2.d1b612ed.chunk.css.map",
+    "static/css/main.561f9a79.chunk.css.map": "/datavis-project/static/css/main.561f9a79.chunk.css.map",
+    "static/media/antes-2003.jpg": "/datavis-project/static/media/antes-2003.daa121b7.jpg",
+    "static/media/depois-2003.jpg": "/datavis-project/static/media/depois-2003.1f5015a8.jpg",
+    "static/media/exemplo-incendio.jpg": "/datavis-project/static/media/exemplo-incendio.c8d2f961.jpg",
+    "static/media/inpe-form.jpg": "/datavis-project/static/media/inpe-form.47c527aa.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.46640c3d.js",
+    "static/js/runtime-main.6105d856.js",
     "static/css/2.d1b612ed.chunk.css",
     "static/js/2.4fb0502d.chunk.js",
-    "static/css/main.2292dca6.chunk.css",
-    "static/js/main.e04be6c9.chunk.js"
+    "static/css/main.561f9a79.chunk.css",
+    "static/js/main.20f751e7.chunk.js"
   ]
 }
