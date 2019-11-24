@@ -44,7 +44,7 @@ const TreatmentSections = withScrolly(props => {
     for (let i = 0; i < 21; i++) {
       setTimeout(() => {
         worker.postMessage({
-          csvName: `${1999 + i}_depois.csv`,
+          csvName: `${process.env.PUBLIC_URL}/datasets/${1999 + i}_depois.csv`,
           year: 1999 + i
         });
       }, 800 * i);

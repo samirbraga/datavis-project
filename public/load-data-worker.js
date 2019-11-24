@@ -2,7 +2,7 @@ if (typeof importScripts === 'function') {
     importScripts('https://d3js.org/d3.v5.min.js');
 
     self.addEventListener("message", e => {
-        const csvURL = '/datasets/' + e.data.csvName;
+        const csvURL = e.data.csvName;
         let csvReq = new XMLHttpRequest();
         csvReq.open("GET", csvURL, true);
         csvReq.onreadystatechange = function () {
