@@ -24,18 +24,35 @@ for (let i = 1999; i <= 2019; i++) {
 
 initialSize /= 1024;
 
+const worker = new Worker(process.env.PUBLIC_URL + '/load-data-worker.js');
+
+const CSVs = Array(21).fill(1);
+
 const TreatmentSections = withScrolly(props => {
   const { scrolly } = props;
   const [currentSize, setCurrentSize] = useState(initialSize);
   const [reached, setReached] = useState(false);
 
   useEffect(() => {
-      props.onEnterMe(() => {
-          setReached(true);
-      });
-      props.onLeaveMe(() => {
-          setReached(false);
-      });
+    props.onEnterMe(() => {
+      setReached(true);
+    });
+    props.onLeaveMe(() => {
+      setReached(false);
+    });
+
+    for (let i = 0; i < 21; i++) {
+      setTimeout(() => {
+        worker.postMessage({
+          csvName: `${1999 + i}_depois.csv`,
+          year: 1999 + i
+        });
+      }, 800 * i);
+    }
+
+    worker.addEventListener('message', e => {
+      CSVs[e.data.year - 1999] = e.data.data;
+    });
   }, []);
 
   return (
