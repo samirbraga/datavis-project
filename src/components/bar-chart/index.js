@@ -4,7 +4,9 @@ import * as d3 from 'd3';
 import crossfilter from 'crossfilter2';
 import "./style.scss";
 
-const LineChart = props => {
+const datasets = {};
+
+const BarChart = props => {
     let node;
     const { worker, year } = props;
     const [dataset, setDataset] = useState([]);
@@ -14,27 +16,28 @@ const LineChart = props => {
         if (dataset.length > 0) {
             node.innerHTML = '';
             const facts = crossfilter(dataset);
-            const dataDim = facts.dimension(d => d.datahora);
-            const numberByYearGroup = dataDim.group();
+            const ecosDim = facts.dimension(d => d.bioma);
+            const ecosGroup = ecosDim.group();
     
-            let lineChart = dc.lineChart(node)
-            let xScale = d3.scaleTime()
-                            .domain([dataDim.bottom(1)[0].datahora, dataDim.top(1)[0].datahora])
-            
-            lineChart.width(700)
+            let barChart = dc.barChart(node);
+            //let xScale = d3.scaleOrdinal().domain(ecosDim);
+                            
+            barChart.width(900)
                     .height(400)
-                    .dimension(dataDim)
-                    .margins({top: 30, right: 50, bottom: 25, left: 40})
-                    .renderArea(false)
-                    .x(xScale)
-                    .xUnits(d3.timeYears)
+                    .dimension(ecosDim)
+                    .margins({ top: 30, right: 50, bottom: 25, left: 40 })
+                    .x(d3.scaleBand())
+                        .xUnits(dc.units.ordinal)
                     .renderHorizontalGridLines(true)
-                    .legend(dc.legend().x(100).y(10).itemHeight(13).gap(5))
+                    .legend(dc.legend().x(650).y(10).itemHeight(13).gap(5))
                     .brushOn(false)
-                    .elasticX(true)
-                    .group(numberByYearGroup, 'Numero de queimadas')
-                    .ordinalColors(["#f24813"]);
-            dc.renderAll()
+                    .group(ecosGroup, 'Queimadas')
+                    .ordinalColors(["#ffa500"]);
+                    
+            
+            barChart.gap(50);
+            
+            barChart.render();
             setLoaded(true);
         }
     }, [dataset]);
@@ -79,4 +82,4 @@ const LineChart = props => {
     )
 };
 
-export default LineChart;
+export default BarChart;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Animated } from "react-animated-css";
 import { Container, Row, Col } from 'reactstrap';
 import { withScrolly } from '../../react-scrolly';
-import LineChart from '../line-chart';
+import BarChart from '../bar-chart';
 
 import "./style.scss";
 
@@ -27,18 +27,18 @@ const Vis1Section = props => {
                 className="treatment-section section-sticky-top"
             >
                 <Row className="align-items-center">
+                    <Col md={{ offset: 1, size: 5 }}>
+                        <Animated animationIn="fadeIn" isVisible={reached}>
+                            <h3 className="mb-3">Queimadas por bioma</h3>
+                            <p>
+                                A queima de biomassa nos ecossistemas devido à expansão da fronteira agrícola, à conversão de florestas e cerrados em pastagens, e à renovação de cultivos agrícolas, são alguns dos fatores mais importantes que causam impactos sobre o clima e a biodiversidade.
+                            </p>
+                        </Animated>
+                    </Col>
                     <Col
                         md={6}
                     >
-                        <LineChart worker={worker} year={1999} />
-                    </Col>
-                    <Col md={5}>
-                        <Animated animationIn="fadeIn" isVisible={reached}>
-                            <h3 className="mb-3">Queimadas por mês</h3>
-                            <p>
-                                Atualmente, a maior incidência de queimadas no Brasil ocorre no período compreendido entre agosto e novembro com um máximo em setembro Este máximo sazonal está diretamente associado com o período seco que antecede a estação chuvosa e de plantio.
-                            </p>
-                        </Animated>
+                        <BarChart worker={worker} year={1999} />
                     </Col>
                 </Row>
             </Container>

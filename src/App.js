@@ -13,6 +13,7 @@ import Treatment3Section from './components/treatment-3-section';
 import Treatment4Section from './components/treatment-4-section';
 import Treatment5Section from './components/treatment-5-section';
 import Vis1Section from './components/vis-1-section';
+import Vis2Section from './components/vis-2-section';
 import SizePG from './components/size-pg';
 import './App.scss';
 
@@ -79,6 +80,15 @@ const App = () => {
 
   useEffect(() => {
     document.documentElement.scrollTop = document.documentElement.scrollTop + 1;
+
+    // for (let i = 0; i < 21; i++) {
+    //   setTimeout(() => {
+    //     worker.postMessage({
+    //       csvName: `${process.env.PUBLIC_URL}/datasets/${1999 + i}_depois.csv`,
+    //       year: 1999 + i
+    //     });
+    //   }, 800 * i);
+    // }
   }, []);
 
   return (
@@ -102,6 +112,7 @@ const App = () => {
       <TreatmentSections scrolly={scrolly} />
       <TitleSection progress={99} title='ANÁLISES E VISUALIZAÇÕES' scrolly={scrolly} />
       <Vis1Section scrolly={scrolly} worker={worker} />
+      <Vis2Section scrolly={scrolly} worker={worker} />
     </ScrollyWrapper>
   );
 };
