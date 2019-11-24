@@ -11,6 +11,7 @@ import Treatment1Section from './components/treatment-1-section';
 import Treatment2Section from './components/treatment-2-section';
 import Treatment3Section from './components/treatment-3-section';
 import Treatment4Section from './components/treatment-4-section';
+import Treatment5Section from './components/treatment-5-section';
 import SizePG from './components/size-pg';
 import './App.scss';
 
@@ -38,6 +39,7 @@ const TreatmentSections = withScrolly(props => {
   }, []);
 
   return (
+    <>
     <div ref={props.innerRef}>
       <TextSection
         scrolly={scrolly}
@@ -60,6 +62,8 @@ const TreatmentSections = withScrolly(props => {
         <SizePG value={currentSize} max={initialSize} />
       </Animated>
     </div>
+    <Treatment5Section scrolly={scrolly} />
+    </>
   );
 });
 
@@ -89,10 +93,9 @@ const App = () => {
       <TitleSection progress={15} title='COLETA DOS DADOS' scrolly={scrolly} />
       <Collection1Section scrolly={scrolly} />
       <Collection2Section scrolly={scrolly} />
-      <TitleSection progress={65} title='TRATAMENTO DOS DADOS' scrolly={scrolly} />
+      <TitleSection progress={75} title='TRATAMENTO DOS DADOS' scrolly={scrolly} />
       <TreatmentSections scrolly={scrolly} />
-      <TitleSection progress={80} title='ANÁLISES E CONTEXTUALIZAÇÃO' scrolly={scrolly} />
-      <TitleSection progress={99} title='VISUALIZAÇÃO' scrolly={scrolly} />
+      <TitleSection progress={99} title='ANÁLISES E VISUALIZAÇÕES' scrolly={scrolly} />
     </ScrollyWrapper>
   );
 };

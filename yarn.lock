@@ -3724,7 +3724,7 @@ d3@^3.5.17:
   version "3.5.17"
   resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
 
-d3@^5.14.2:
+d3@^5.12.0, d3@^5.14.2:
   version "5.14.2"
   resolved "https://registry.yarnpkg.com/d3/-/d3-5.14.2.tgz#a3fb3af016d362aaf4dacbe618ae949c1744b8c4"
   dependencies:
@@ -3784,6 +3784,13 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     abab "^2.0.0"
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
+
+dc@^3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/dc/-/dc-3.1.8.tgz#0fa3316eb869fadb8388d566beea348b69298ae2"
+  dependencies:
+    d3 "^5.12.0"
+    url-search-params-polyfill "^7.0.0"
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
@@ -10302,6 +10309,10 @@ url-parse@^1.4.3:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+url-search-params-polyfill@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-7.0.0.tgz#98b56ed29e67710588fdc3c361083b0f78303d95"
 
 url@^0.11.0:
   version "0.11.0"

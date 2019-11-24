@@ -1,0 +1,20 @@
+.treatment-section {
+    .cluster-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        
+        .cluster-point {
+            position: absolute;
+            border-radius: 50%;
+            background: cornflowerblue;
+            width: 10px;
+            height: 10px;
+            left: 50%;
+            top: 50%;
+
+            color: white;
+            font-size: 1rem;
+        }
+    }
+}

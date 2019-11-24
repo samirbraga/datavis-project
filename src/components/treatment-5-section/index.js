@@ -2,19 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Animated } from "react-animated-css";
 import { Container, Row, Col } from 'reactstrap';
 import { withScrolly } from '../../react-scrolly';
-import dataInfo from '../../data/datasets-info.json';
-import IncendioExemplo from '../../images/exemplo-incendio.jpg';
+import ChromeTabs from '../../images/chrome-tabs.gif';
 import "./style.scss";
 
-let finalSize = 0;
-
-for (let i = 1999; i <= 2019; i++) {
-  finalSize += dataInfo[i.toString()].size_f_kb;
-}
-
-finalSize /= 1024;
-
-const Treatment3Section = props => {
+const Treatment2Section = props => {
     const [reached, setReached] = useState(false);
     const [scale, setScale] = useState(1);
     const [rate, setRate] = useState(1);
@@ -31,13 +22,8 @@ const Treatment3Section = props => {
             _rate = _rate > 1 ? 1 : _rate;
             setRate(_rate);
         });
-        
         props.onSeeMe(() => {
             setReached(true);
-        });
-
-        props.onEnterMe(() => {
-            props.setCurrentSize(finalSize  );
         });
     }, []);
 
@@ -52,18 +38,26 @@ const Treatment3Section = props => {
                 className="treatment-section section-sticky-top"
             >
                 <Row className="align-items-center">
-                    <Col md={{ offset: 1, size: 10}}>
+                    <Col
+                        md={{ offset: 1, size: 5 }}
+                    >
                         <Animated animationIn="fadeIn" isVisible={reached}>
-                            <h3 className="text-center mb-3">Remoção de queimadas com menos de 3 focos</h3>
-                            <p className="text-center mb-5">
-                                Os falso-positivos tratam de queimadas com poucos focos que podem se tratar apenas de incêndios em áreas urbanas. Uma queimada característica é mostrada na figura ao lado. <a href="http://queimadas.cptec.inpe.br/~rqueimadas/ExemplosValidacao/2019_exemplosvalida_INPE_Queimadas/?C=N;O=D">Aqui</a> há vários outros exemplos.
+                            <h3 className="mb-3">Processamento simples em paralelo</h3>
+                            <p className="mr-4">
+                                Como os datasets tinham tamanhos consideráveis, foi construído um notebook para fazer todo o processamento descrito acima, e este foi executado para cada um dos conjuntos de dados, separadamente em abas do navegador Google Chrome que as divide em processos diferentes. Com isso, o próprio escalonador do Sistema Operacional pode separá-los para execução em paralelo nos núcleos do processador e otimizar o processo.
                             </p>
                         </Animated>
+                    </Col>
+                    <Col
+                        md={6}
+                        className="collection-img h-100 p-0"
+                    >
                         <div
-                            className="treatment-img p-0"
-                        >
-                            <img className="d-block mx-auto" style={{ maxWidth: '1000px' }} src={IncendioExemplo} alt="Exemplo de incêndio capturado no satélite e noticiado nos veículos de comunicação" />
-                        </div>
+                            className="h-100 w-100"
+                            style={{
+                                backgroundImage: `url(${ChromeTabs})`
+                            }}
+                        />
                     </Col>
                 </Row>
             </Container>
@@ -71,4 +65,4 @@ const Treatment3Section = props => {
     );
 };
 
-export default withScrolly(Treatment3Section);
+export default withScrolly(Treatment2Section);
