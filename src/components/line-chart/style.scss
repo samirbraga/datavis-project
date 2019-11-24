@@ -1,0 +1,14 @@
+.chart-container {
+    position: relative;
+    z-index: 100;
+
+    path {
+        fill: transparent;
+    }
+
+    select {
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+}

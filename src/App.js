@@ -12,6 +12,7 @@ import Treatment2Section from './components/treatment-2-section';
 import Treatment3Section from './components/treatment-3-section';
 import Treatment4Section from './components/treatment-4-section';
 import Treatment5Section from './components/treatment-5-section';
+import Vis1Section from './components/vis-1-section';
 import SizePG from './components/size-pg';
 import './App.scss';
 
@@ -26,8 +27,6 @@ initialSize /= 1024;
 
 const worker = new Worker(process.env.PUBLIC_URL + '/load-data-worker.js');
 
-const CSVs = Array(21).fill(1);
-
 const TreatmentSections = withScrolly(props => {
   const { scrolly } = props;
   const [currentSize, setCurrentSize] = useState(initialSize);
@@ -39,19 +38,6 @@ const TreatmentSections = withScrolly(props => {
     });
     props.onLeaveMe(() => {
       setReached(false);
-    });
-
-    for (let i = 0; i < 21; i++) {
-      setTimeout(() => {
-        worker.postMessage({
-          csvName: `${process.env.PUBLIC_URL}/datasets/${1999 + i}_depois.csv`,
-          year: 1999 + i
-        });
-      }, 800 * i);
-    }
-
-    worker.addEventListener('message', e => {
-      CSVs[e.data.year - 1999] = e.data.data;
     });
   }, []);
 
@@ -86,6 +72,8 @@ const TreatmentSections = withScrolly(props => {
 
 const App = () => {
   const scrolly = useScrolly(scroll => scroll);
+  const [CSVList, setCSVList] = useState({});
+  const [loaded, setLoaded] = useState(false);
   
   scrolly.setWrapperHeight(document.documentElement.clientHeight);
 
@@ -113,6 +101,7 @@ const App = () => {
       <TitleSection progress={75} title='TRATAMENTO DOS DADOS' scrolly={scrolly} />
       <TreatmentSections scrolly={scrolly} />
       <TitleSection progress={99} title='ANÁLISES E VISUALIZAÇÕES' scrolly={scrolly} />
+      <Vis1Section scrolly={scrolly} worker={worker} />
     </ScrollyWrapper>
   );
 };
